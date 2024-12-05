@@ -14,7 +14,7 @@ A Node.js utility that converts NEM12 (National Electricity Market) meter readin
 
 ```bash
 # Clone the repository
-git clone [your-repo-url]
+git clone git@github.com:britotiagos/NEM12-process.git
 
 # Install dependencies
 yarn install
@@ -27,6 +27,7 @@ node index.js [path-to-nem12-file]
 ```
 
 The program will:
+
 1. Read the specified NEM12 file
 2. Process each record
 3. Generate corresponding SQL statements
@@ -35,7 +36,9 @@ The program will:
 ## File Format Support
 
 ### Input (NEM12)
+
 The parser expects NEM12 files with:
+
 - 200 records: Contains meter configuration
   - NMI (National Meter Identifier)
   - Interval length (30 or 60 minutes)
@@ -44,7 +47,9 @@ The parser expects NEM12 files with:
   - Consumption values
 
 ### Output (SQL)
+
 Generates SQL INSERT statements in the format:
+
 ```sql
 INSERT INTO meter_readings (nmi, timestamp, consumption)
 VALUES ('NMI123456789', '2024-01-01T00:30:00.000Z', 0.123);

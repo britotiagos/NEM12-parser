@@ -14,7 +14,7 @@ A Node.js utility that converts NEM12 (National Electricity Market) meter readin
 
 ```bash
 # Clone the repository
-git clone git@github.com:britotiagos/NEM12-process.git
+git clone git@github.com:britotiagos/NEM12-parser.git
 
 # Install dependencies
 yarn install
